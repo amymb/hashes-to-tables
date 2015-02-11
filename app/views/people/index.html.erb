@@ -7,7 +7,7 @@
 
   <thead> <%fun= @people[1]%>
     <%fun.each_key do |key|%>
-     <th> <%=key%></th>
+     <th> <%=(key.to_s.gsub('_', ' ')).capitalize%></th>
      <%end%>
 
   </thead>
