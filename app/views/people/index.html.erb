@@ -3,10 +3,19 @@
 </div>
 
 <table class="table table-bordered">
-  <thead>
+
+
+  <thead> <%fun= @people[1]%>
+    <%fun.each_key do |key|%>
+     <th> <%=key%></th>
+     <%end%>
 
   </thead>
   <tbody>
-
+    <%@people.each do |person|%>
+    <tr> <%person.each_value do |value|%>
+      <td><%=value%></td>
+      <%end%>
+      <%end%>
   </tbody>
 </table>
